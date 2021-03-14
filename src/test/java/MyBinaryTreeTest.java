@@ -1,5 +1,6 @@
 import com.bridgelabz.binarysearchtree.MyBinaryNode;
 import com.bridgelabz.binarysearchtree.MyBinaryTree;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +17,6 @@ public class MyBinaryTreeTest {
         tree.add(root, 8);
         tree.add(root, 3);
         tree.add(root, 5);
-
     }
 
     @Test
@@ -25,12 +25,16 @@ public class MyBinaryTreeTest {
         tree.add(root, 8);
         tree.add(root, 3);
         tree.add(root, 5);
-
     }
 
     @Test
     public void inOrder() {
         System.out.println("--------------");
         tree.inOrder(root);
+    }
+
+    @Test
+    public void testSize() {
+        Assertions.assertEquals(5, tree.size(root));
     }
 }
