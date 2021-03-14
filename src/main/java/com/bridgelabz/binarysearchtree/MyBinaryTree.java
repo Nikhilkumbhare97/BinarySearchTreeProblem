@@ -40,4 +40,17 @@ public class MyBinaryTree<K extends Comparable<K>> {
         }
     }
 
+    public boolean search(MyBinaryNode<K> root, K key){
+
+        if(root == null){
+            return false;
+        }else if(root.key.compareTo(key) == 0){
+            return true;
+        }
+        else if(root.key.compareTo(key) < 0){
+            return search(root.right , key);
+        }else{
+            return search(root.left , key);
+        }
+    }
 }

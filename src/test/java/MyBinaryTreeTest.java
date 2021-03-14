@@ -37,4 +37,15 @@ public class MyBinaryTreeTest {
     public void testSize() {
         Assertions.assertEquals(5, tree.size(root));
     }
+
+    @Test
+    public void testSearch_ForTrue() {
+        Assertions.assertTrue(tree.search(root, 5));
+        System.out.println("Element found");
+    }
+
+    @Test
+    public void testSearch_ForFalse() {
+        Assertions.assertFalse(tree.search(root, 10));
+    }
 }
